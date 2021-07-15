@@ -33,7 +33,7 @@ a {
     align-items: center;
 }
 
-.header__logo h1 {
+.header__logo a {
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
@@ -220,7 +220,11 @@ a {
     padding-bottom: 60px;
 }
 
-.footer__logo h1 {
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.footer__logo a {
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
@@ -228,7 +232,6 @@ a {
     line-height: 31px;
     letter-spacing: 0.03em;
     color: #fff;
-    padding-bottom: 20px;
 }
 
 .footer__logo span {
