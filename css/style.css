@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo h1 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    margin-right: 93px;
+}
+
+.header__logo span{
+    color: #2196F3;
+}
+
+.header__menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.header__menu li a {
+    margin-right: 50px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #212121;
+    font-weight: 500;
+}
+
+.header__menu li a:hover {
+    color: #2196F3;
+}
+
+.header__email a {
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em; 
+    color: #757575;
+    margin-left: 320px;
+}
+
+.header__email a:hover {
+    color: #2196F3;
+}
+
+.header__phone a {
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em; 
+    color: #757575;
+    margin-left: 50px;
+}
+
+.services {
+    background: #2F303A;
+}
+
+.services__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 200px;
+    margin-bottom: 30px;
+}
+
+.services__link {
+    text-align: center;
+    padding-bottom: 200px;
+}
+
+.services__link a {
+    padding: 10px 32px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.content {
+    padding: 94px 0;
+}
+
+.content__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__item {
+    width: 270px;
+}
+
+.content__item-title {
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #212121;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.content__item-text {
+    letter-spacing: 0.03em;
+    color: #757575;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+.about__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 50px;
+}
+
+.about__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 94px;
+}
+
+.team {
+    background: #f5f4fa;
+    padding-bottom: 94px;
+}
+
+.team__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.team__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    padding-top: 94px;
+    padding-bottom: 50px;
+}
+
+.team__item img {
+    width: 270px;
+}
+
+.team__item {
+    width: 270px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.team__item-name {
+    font-weight: 500;
+    color: #212121;
+    padding-top: 25px;
+}
+
+.team__item-profesion {
+    font-weight: normal;
+    color: #757575;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.footer {
+    background: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__logo h1 {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.footer__logo span {
+    color: #2196F3;
+}
+
+.footer__menu li {
+    list-style: none;
+    margin-bottom: 9px;
+}
+
+.footer__menu li a {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__menu li:first-child a {
+    color: #fff;
+}
+
