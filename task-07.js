@@ -1,28 +1,46 @@
-const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
-const isLoginValid = function(login) {
-  if(login.length >= 4 && login.length <= 16) return true;
-  return false;
+const Transaction = {
+  DEPOSIT: 'deposit',
+  WITHDRAW: 'withdraw'
 };
-const isLoginUnique = function(allLogins, login) {
-    for(item of allLogins) {
-        if(item === login) {
-            return false;
+
+const account = {
+  balance: 0,
+  transactions: [],
+  createTransaction(amount, type) {
+      return {
+          id: this.transactions.length + 1,
+          amount,
+          type
+      }
+  },
+  deposit(amount) {
+    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
+    this.balance += amount;
+  },
+  withdraw(amount) {
+      if(amount > this.balance) {
+          return alert('Снятие такой суммы не возможно, недостаточно средств')
+      }
+      this.transactions.push(this.createTransaction(amount, Transaction.WITHDRAW));
+      this.balance -= amount;
+  },
+  getBalance() {
+      return this.balance;
+  },
+  getTransactionDetails(id) {
+      for(item of this.transactions) {
+        if(item.id === id) {
+            return item;
+        }
+      }
+  },
+  getTransactionTotal(type) {
+    let total = 0;
+    for(item of this.transactions) {
+        if(item.type === type) {
+            total += item.amount;
         }
     }
-    return true;
+    return total;
+  },
 };
-const addLogin = function(allLogins, login) {
-  const valid = isLoginValid(login);
-  if(!valid) return 'Ошибка! Логин должен быть от 4 до 16 символов';
-  
-  const unique = isLoginUnique(allLogins, login);
-  if(!unique) return 'Такой логин уже используется!';
-
-  logins.push(login);
-  return 'Логин успешно добавлен!';
-};
-
-console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
-console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
-console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
