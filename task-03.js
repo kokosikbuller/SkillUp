@@ -1,35 +1,14 @@
-class Storage {
-    constructor(arr) {
-        this.items = arr;
-    }
+import users from './users.js';
 
-    getItems() {
-        return this.items;
-    }
+const getUsersWithGender = (users, gender) => {
 
-    addItem(item) {
-        this.items.push(item);
-    }
+    return users.filter((user) => user.gender === gender).map(user => user.name);
 
-    removeItem(item) {
-        const index = this.items.indexOf(item);
-        this.items.splice(index, 1);
-    }
-}
-
-
-
-
-const storage = new Storage([
-    'Нанитоиды',
-    'Пролонгер',
-    'Железные жупи',
-    'Антигравитатор',
-  ]);
-
-  const items = storage.getItems();
-  console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
-  storage.addItem('Дроид');
-  console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
-  storage.removeItem('Пролонгер');
-  console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
+//    return users.reduce((acc, user) => {
+//     if(user.gender === gender) {
+//         acc.push(user.name)
+//     }
+//     return acc
+//    }, []);
+};
+console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
