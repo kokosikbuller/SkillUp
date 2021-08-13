@@ -18,8 +18,8 @@ const images = [
     },
   ];
 
-  const gg = images.reduce((acc, image) => acc += `<li style='list-style: none'><img style='width: 500px; height: 300px' src=${image.url} alt=${image.alt}/></li>`, '');
+  const result = images.reduce((acc, image) => acc += `<li style='list-style: none'><img style='width: 500px; height: 300px' src=${image.url} alt=${image.alt}/></li>`, '');
   gallery.style.display = 'flex';
   gallery.style.justifyContent = 'space-around';
-  gallery.insertAdjacentHTML('afterbegin', gg);
+  gallery.insertAdjacentHTML('afterbegin', result);
   
